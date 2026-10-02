@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root { --bg:#07080d; --panel:rgba(16,18,27,.72); --border:rgba(255,255,255,.09); --muted:#8e93a6; --text:#f5f7fb; --accent:#7c5cff; }
+* { box-sizing:border-box; }
+html,body { margin:0; min-height:100%; background:var(--bg); color:var(--text); font-family:Arial,Helvetica,sans-serif; }
+body { overflow-x:hidden; }
+button,input { font:inherit; }
+::selection { background:rgba(124,92,255,.35); }
+.bg-grid { background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:44px 44px; }
+.glow { position:fixed; width:520px; height:520px; border-radius:50%; filter:blur(110px); opacity:.16; pointer-events:none; background:#694cff; top:-240px; left:50%; transform:translateX(-50%); }
+.glass { background:var(--panel); border:1px solid var(--border); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); box-shadow:0 24px 80px rgba(0,0,0,.35); }
+.scrollbar::-webkit-scrollbar { width:5px; }
+.scrollbar::-webkit-scrollbar-thumb { background:#292d3b; border-radius:99px; }
+@keyframes pulseDot { 0%,80%,100%{transform:scale(.65);opacity:.4} 40%{transform:scale(1);opacity:1} }
+.dot { animation:pulseDot 1.2s infinite; }
+.dot:nth-child(2){animation-delay:.15s}.dot:nth-child(3){animation-delay:.3s}
